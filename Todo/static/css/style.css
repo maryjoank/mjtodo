@@ -1,0 +1,36 @@
+nav .container{
+    max-width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template columns:1fr, 7fr;
+    justify-items: end;
+    align-items: centre;
+}
+
+nav .container ul li{
+    display: inline;
+    
+}
+.images{
+    width: 150px;
+    
+}
+nav .container ul a{
+    font-size: 20px;
+    text-decoration: none;
+    border: 1fr solid rgb(224, 224, 231);
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+    padding: 4px, 7px;
+}
+
+.container{max-width: 80%;
+    margin: auto;
+    display: grid;
+    
+
+}
+body{
+    background-color:rgb(209, 207, 183) ;
+}

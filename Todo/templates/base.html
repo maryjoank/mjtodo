@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  
+  <link rel="icon"href="{% static 'images/favicon-32x32.png' %}" type="images/png" >
+  <title>
+    {% block title %}
+      Welcome To Todo
+    {% endblock title %}
+  </title>
+</head>
+<body>
+  <img class="images" src="{% static 'images/lg1.png' %}" alt="charity">
+<nav>  
+
+    <div class="container">
+      
+      <ul>
+        {% if request.user.is_authenticated %}
+        <li>
+          Welcome {{request.user.username}}
+        </li>
+        <li>
+          <a href=" {% url 'logout' %}">LogOut</a>
+        </li>
+        {% else %}
+        <li>
+          <a href="{% url 'register' %}">Register</a>
+        </li>
+        <li>
+          <a href=" {% url 'login' %}">LogIn</a>
+        </li>
+        
+        {% endif %}
+        <li>
+          <a href="{% url 'contact' %}">Contact</a>
+        </li>
+        <li>
+          <a href=" {% url 'home' %}">Home</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  {% block todocontent %}
+    
+  {% endblock todocontent %}
+</body>
+</html>

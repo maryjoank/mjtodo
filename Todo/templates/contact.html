@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Welcome to Todo App
+{% endblock title %}
+
+{% block todocontent %}
+<section id="contact">
+  <div class="container">
+    <h1>Contact Form</h1>
+    <form action="" method="POST">
+      {% csrf_token %}
+       {% comment %} {{ form.as_p }}  {% endcomment %}
+      <div>
+        {{ form.firstname.label }}
+        {{ form.firstname }}
+      </div>
+      <div>
+        {{ form.lastname.label }}
+        {{ form.lastname }}
+      </div>
+      <div>
+        {{ form.email.label }}
+        {{ form.email }}
+      </div>
+      <div>
+        {{ form.message.label }}
+        {{ form.message }}
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <hr>
+    <h2>My Contacts</h2>
+    <ul>
+      {% for item in contacts %}
+        <li>First Name: {{ item.firstname }} </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endblock todocontent %}

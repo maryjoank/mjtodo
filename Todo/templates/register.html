@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  
+{% endblock title %}
+
+{% block todocontent %}
+<section id="todocontent">
+  <div class="container">
+    <h1>My Todos</h1>
+    <form action="" method='POST'>
+      {{ form.as_p }}
+      <button type="submit">Post</button>
+    </form>
+  </div>
+</section>
+{% endblock todocontent %}

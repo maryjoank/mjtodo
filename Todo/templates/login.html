@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}
+  
+{% endblock title %}
+
+{% block blockname %}
+<section id="todocontent">
+  <div class="container">
+      <h1>Login</h1>
+
+{% if messages %}
+  {% for items in messages %}
+    <p style="color: pink;font-weight-bold: "> {{ item }} </p>
+  {% endfor %}
+  
+{% endif %}
+
+
+<form action="{% url 'login' %}" method="POST">
+ {% csrf_token %}
+ <div>
+     <label for="username">Username</label>
+     <input type="text" name="username" id="username">
+ </div>
+ <div>
+     <label for="password">Password</label>
+     <input type="text" name="password" id="password">
+ </div>
+
+
+</form> 
+</div>
+</section>
+{% endblock blockname %}
