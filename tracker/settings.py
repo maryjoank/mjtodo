@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 't2hfdghh0tdobh%$+2a=f!*wz^m-ym-q5)cm=9rz^nun!^-z%z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['mjtodo.herokuapp.com','localhost']
 
